@@ -17,6 +17,9 @@
 		03C8EA262A1F587E009F9E17 /* WorkShopProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8EA252A1F587E009F9E17 /* WorkShopProjectTests.swift */; };
 		03C8EA302A1F587E009F9E17 /* WorkShopProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8EA2F2A1F587E009F9E17 /* WorkShopProjectUITests.swift */; };
 		03C8EA322A1F587E009F9E17 /* WorkShopProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8EA312A1F587E009F9E17 /* WorkShopProjectUITestsLaunchTests.swift */; };
+		2102CED82A20A64C0032EA57 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2102CED62A20A64C0032EA57 /* FavoriteCell.swift */; };
+		2102CED92A20A64C0032EA57 /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2102CED72A20A64C0032EA57 /* FavoriteCell.xib */; };
+		2102CEDB2A20B4480032EA57 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2102CEDA2A20B4480032EA57 /* FavoriteViewController.swift */; };
 		26A92E455320F602014B39BE /* Pods_WorkShopProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */; };
 		4EF64EC0009106D2AF1D537E /* Pods_WorkShopProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C63314537B406AAE7A452AA /* Pods_WorkShopProjectTests.framework */; };
 		9CF48D942A209A1A005AE293 /* FavouriteSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF48D932A209A1A005AE293 /* FavouriteSB.storyboard */; };
@@ -61,6 +64,9 @@
 		03C8EA312A1F587E009F9E17 /* WorkShopProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkShopProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0C4803910B36E152B1302CA1 /* Pods-WorkShopProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProject.release.xcconfig"; path = "Target Support Files/Pods-WorkShopProject/Pods-WorkShopProject.release.xcconfig"; sourceTree = "<group>"; };
 		1C63314537B406AAE7A452AA /* Pods_WorkShopProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkShopProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2102CED62A20A64C0032EA57 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		2102CED72A20A64C0032EA57 /* FavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCell.xib; sourceTree = "<group>"; };
+		2102CEDA2A20B4480032EA57 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		3612A9359F50AD55D402F514 /* Pods-WorkShopProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-WorkShopProjectTests/Pods-WorkShopProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4BC7CB0EE9770739AC670A68 /* Pods_WorkShopProject_WorkShopProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkShopProject_WorkShopProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkShopProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				9CF48D932A209A1A005AE293 /* FavouriteSB.storyboard */,
+				2102CED62A20A64C0032EA57 /* FavoriteCell.swift */,
+				2102CED72A20A64C0032EA57 /* FavoriteCell.xib */,
+				2102CEDA2A20B4480032EA57 /* FavoriteViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -428,6 +437,7 @@
 				03C8EA132A1F587C009F9E17 /* Main.storyboard in Resources */,
 				9CF48D942A209A1A005AE293 /* FavouriteSB.storyboard in Resources */,
 				9CF48D962A209A34005AE293 /* HomeSB.storyboard in Resources */,
+				2102CED92A20A64C0032EA57 /* FavoriteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,9 +567,11 @@
 			files = (
 				9CF48D9A2A209A75005AE293 /* NetworkService.swift in Sources */,
 				03C8EA162A1F587C009F9E17 /* WorkShopProject.xcdatamodeld in Sources */,
+				2102CED82A20A64C0032EA57 /* FavoriteCell.swift in Sources */,
 				03C8EA102A1F587C009F9E17 /* ViewController.swift in Sources */,
 				03C8EA0C2A1F587C009F9E17 /* AppDelegate.swift in Sources */,
 				9CF48D9C2A209A98005AE293 /* CoreData.swift in Sources */,
+				2102CEDB2A20B4480032EA57 /* FavoriteViewController.swift in Sources */,
 				03C8EA0E2A1F587C009F9E17 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
