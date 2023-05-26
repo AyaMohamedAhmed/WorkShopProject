@@ -22,6 +22,10 @@
 		2102CEDB2A20B4480032EA57 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2102CEDA2A20B4480032EA57 /* FavoriteViewController.swift */; };
 		26A92E455320F602014B39BE /* Pods_WorkShopProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */; };
 		4EF64EC0009106D2AF1D537E /* Pods_WorkShopProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C63314537B406AAE7A452AA /* Pods_WorkShopProjectTests.framework */; };
+		9C3A15602A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */; };
+		9C3A15612A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A155F2A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib */; };
+		9C9FD4192A20DF1000A460F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FD4182A20DF1000A460F2 /* Constants.swift */; };
+		9C9FD41B2A20ED7A00A460F2 /* RecipeResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FD41A2A20ED7A00A460F2 /* RecipeResponce.swift */; };
 		9CF48D942A209A1A005AE293 /* FavouriteSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF48D932A209A1A005AE293 /* FavouriteSB.storyboard */; };
 		9CF48D962A209A34005AE293 /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF48D952A209A34005AE293 /* HomeSB.storyboard */; };
 		9CF48D982A209A50005AE293 /* DetailsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF48D972A209A50005AE293 /* DetailsSB.storyboard */; };
@@ -72,6 +76,10 @@
 		503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkShopProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BE197B24D0193904CBF64B /* Pods-WorkShopProject-WorkShopProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProject-WorkShopProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-WorkShopProject-WorkShopProjectUITests/Pods-WorkShopProject-WorkShopProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		880500EBA6A4C8885D4ED04C /* Pods-WorkShopProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProjectTests.release.xcconfig"; path = "Target Support Files/Pods-WorkShopProjectTests/Pods-WorkShopProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionDetailsCell.swift; sourceTree = "<group>"; };
+		9C3A155F2A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSectionDetailsCell.xib; sourceTree = "<group>"; };
+		9C9FD4182A20DF1000A460F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C9FD41A2A20ED7A00A460F2 /* RecipeResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponce.swift; sourceTree = "<group>"; };
 		9CF48D932A209A1A005AE293 /* FavouriteSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteSB.storyboard; sourceTree = "<group>"; };
 		9CF48D952A209A34005AE293 /* HomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
 		9CF48D972A209A50005AE293 /* DetailsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsSB.storyboard; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 		03C8EA0A2A1F587C009F9E17 /* WorkShopProject */ = {
 			isa = PBXGroup;
 			children = (
+				9C9FD4172A20DEC900A460F2 /* Helper */,
 				9CF48D8D2A2097B0005AE293 /* Models */,
 				9CF48D832A20969A005AE293 /* Moduals */,
 				03C8EA0B2A1F587C009F9E17 /* AppDelegate.swift */,
@@ -176,6 +185,14 @@
 				880500EBA6A4C8885D4ED04C /* Pods-WorkShopProjectTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C9FD4172A20DEC900A460F2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FD4182A20DF1000A460F2 /* Constants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		9CF48D832A20969A005AE293 /* Moduals */ = {
@@ -255,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				9CF48D972A209A50005AE293 /* DetailsSB.storyboard */,
+				9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */,
+				9C3A155F2A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +290,7 @@
 			children = (
 				9CF48D8F2A2097E1005AE293 /* CoreData */,
 				9CF48D8E2A2097BE005AE293 /* NetworkService */,
+				9C9FD41A2A20ED7A00A460F2 /* RecipeResponce.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -433,6 +453,7 @@
 			files = (
 				9CF48D982A209A50005AE293 /* DetailsSB.storyboard in Resources */,
 				03C8EA1B2A1F587E009F9E17 /* LaunchScreen.storyboard in Resources */,
+				9C3A15612A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib in Resources */,
 				03C8EA182A1F587E009F9E17 /* Assets.xcassets in Resources */,
 				03C8EA132A1F587C009F9E17 /* Main.storyboard in Resources */,
 				9CF48D942A209A1A005AE293 /* FavouriteSB.storyboard in Resources */,
@@ -565,14 +586,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3A15602A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift in Sources */,
 				9CF48D9A2A209A75005AE293 /* NetworkService.swift in Sources */,
 				03C8EA162A1F587C009F9E17 /* WorkShopProject.xcdatamodeld in Sources */,
+				9C9FD41B2A20ED7A00A460F2 /* RecipeResponce.swift in Sources */,
 				2102CED82A20A64C0032EA57 /* FavoriteCell.swift in Sources */,
 				03C8EA102A1F587C009F9E17 /* ViewController.swift in Sources */,
 				03C8EA0C2A1F587C009F9E17 /* AppDelegate.swift in Sources */,
 				9CF48D9C2A209A98005AE293 /* CoreData.swift in Sources */,
 				2102CEDB2A20B4480032EA57 /* FavoriteViewController.swift in Sources */,
 				03C8EA0E2A1F587C009F9E17 /* SceneDelegate.swift in Sources */,
+				9C9FD4192A20DF1000A460F2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
