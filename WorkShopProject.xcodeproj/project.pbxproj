@@ -118,6 +118,7 @@
 		03C8EA0A2A1F587C009F9E17 /* WorkShopProject */ = {
 			isa = PBXGroup;
 			children = (
+				9CF48D8D2A2097B0005AE293 /* Models */,
 				9CF48D832A20969A005AE293 /* Moduals */,
 				03C8EA0B2A1F587C009F9E17 /* AppDelegate.swift */,
 				03C8EA0D2A1F587C009F9E17 /* SceneDelegate.swift */,
@@ -238,6 +239,29 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9CF48D8D2A2097B0005AE293 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CF48D8F2A2097E1005AE293 /* CoreData */,
+				9CF48D8E2A2097BE005AE293 /* NetworkService */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CF48D8E2A2097BE005AE293 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		9CF48D8F2A2097E1005AE293 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		ABC35E6CBD2485E2802AA9A5 /* Frameworks */ = {
