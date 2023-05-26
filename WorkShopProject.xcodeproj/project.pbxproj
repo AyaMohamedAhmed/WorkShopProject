@@ -118,6 +118,7 @@
 		03C8EA0A2A1F587C009F9E17 /* WorkShopProject */ = {
 			isa = PBXGroup;
 			children = (
+				9CF48D832A20969A005AE293 /* Moduals */,
 				03C8EA0B2A1F587C009F9E17 /* AppDelegate.swift */,
 				03C8EA0D2A1F587C009F9E17 /* SceneDelegate.swift */,
 				03C8EA0F2A1F587C009F9E17 /* ViewController.swift */,
@@ -157,8 +158,86 @@
 				3612A9359F50AD55D402F514 /* Pods-WorkShopProjectTests.debug.xcconfig */,
 				880500EBA6A4C8885D4ED04C /* Pods-WorkShopProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9CF48D832A20969A005AE293 /* Moduals */ = {
+			isa = PBXGroup;
+			children = (
+				9CF48D862A2096BE005AE293 /* Favourite */,
+				9CF48D852A2096AD005AE293 /* Home */,
+				9CF48D842A2096A6005AE293 /* Details  */,
+			);
+			path = Moduals;
+			sourceTree = "<group>";
+		};
+		9CF48D842A2096A6005AE293 /* Details  */ = {
+			isa = PBXGroup;
+			children = (
+				9CF48D8C2A209723005AE293 /* ViewModel */,
+				9CF48D8B2A209710005AE293 /* View */,
+			);
+			path = "Details ";
+			sourceTree = "<group>";
+		};
+		9CF48D852A2096AD005AE293 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9CF48D8A2A209702005AE293 /* ViewModel */,
+				9CF48D892A2096F3005AE293 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9CF48D862A2096BE005AE293 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				9CF48D882A2096D3005AE293 /* ViewModel */,
+				9CF48D872A2096C6005AE293 /* View */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		9CF48D872A2096C6005AE293 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CF48D882A2096D3005AE293 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9CF48D892A2096F3005AE293 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CF48D8A2A209702005AE293 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9CF48D8B2A209710005AE293 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CF48D8C2A209723005AE293 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		ABC35E6CBD2485E2802AA9A5 /* Frameworks */ = {
