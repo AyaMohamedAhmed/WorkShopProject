@@ -8,18 +8,18 @@
 import Foundation
 import CoreData
 
-protocol InsertedMeal{
-    func insertMeal()
+
+protocol CoreDataManagerProtocol{
+    func SaveTeamToDB(context : NSManagedObjectContext , meal : Meal)
+    func getTeamsFromDB(context:NSManagedObjectContext) ->[Meal]
+    func checkIfDBIsEmpty(context : NSManagedObjectContext)-> Bool
+    func deleteTeamFromDB(context:NSManagedObjectContext , meal : Meal)
 }
 
-class CoreDataManager  {
-    static let dataBase = CoreDataManager()
-    
+class CoreDataManager : CoreDataManagerProtocol {
+    let dataBase = CoreDataManager()
     var context:NSManagedObjectContext!
     var mealsObjects:[NSManagedObject]!
-    
-    var insertDelegate: InsertedMeal?
-    
     
     func SaveTeamToDB(context : NSManagedObjectContext , meal : Meal){
         
@@ -35,7 +35,7 @@ class CoreDataManager  {
         do{
             try context.save()
             print("Successful insert")
-            insertDelegate?.insertMeal()
+
         } catch let error as NSError{
             print(error.localizedDescription)
         }
@@ -93,5 +93,3 @@ class CoreDataManager  {
         }
     }
 }
-
-
