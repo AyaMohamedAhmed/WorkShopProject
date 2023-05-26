@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Meal {
+    var mealID :Int
+    var mealName : String
+    var mealMaker : String
+    var mealCountry: String
+    var numOfSurving : Int
+    var mealImage : String
+    
+}
