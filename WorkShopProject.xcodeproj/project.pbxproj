@@ -33,6 +33,7 @@
 		21A067C72A21E0D800E0B12F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A067C62A21E0D800E0B12F /* Repo.swift */; };
 		26A92E455320F602014B39BE /* Pods_WorkShopProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */; };
 		4EF64EC0009106D2AF1D537E /* Pods_WorkShopProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C63314537B406AAE7A452AA /* Pods_WorkShopProjectTests.framework */; };
+		9C2C4A6A2A22180100621F53 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C4A692A22180100621F53 /* HomeViewModel.swift */; };
 		9C3A15602A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */; };
 		9C3A15612A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A155F2A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib */; };
 		9C9FD41B2A20ED7A00A460F2 /* RecipeResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FD41A2A20ED7A00A460F2 /* RecipeResponce.swift */; };
@@ -98,6 +99,7 @@
 		503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkShopProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BE197B24D0193904CBF64B /* Pods-WorkShopProject-WorkShopProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProject-WorkShopProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-WorkShopProject-WorkShopProjectUITests/Pods-WorkShopProject-WorkShopProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		880500EBA6A4C8885D4ED04C /* Pods-WorkShopProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProjectTests.release.xcconfig"; path = "Target Support Files/Pods-WorkShopProjectTests/Pods-WorkShopProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		9C2C4A692A22180100621F53 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = "WorkShopProject/Moduals/Details /View/HomeViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionDetailsCell.swift; sourceTree = "<group>"; };
 		9C3A155F2A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSectionDetailsCell.xib; sourceTree = "<group>"; };
 		9C9FD41A2A20ED7A00A460F2 /* RecipeResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponce.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 		9CF48D8A2A209702005AE293 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9C2C4A692A22180100621F53 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				2102CEDB2A20B4480032EA57 /* FavoriteViewController.swift in Sources */,
 				21A067C72A21E0D800E0B12F /* Repo.swift in Sources */,
 				03C8EA0E2A1F587C009F9E17 /* SceneDelegate.swift in Sources */,
+				9C2C4A6A2A22180100621F53 /* HomeViewModel.swift in Sources */,
 				033BA5C32A21FFF100D79D4E /* DetailsCategoriesCollectionViewCell.swift in Sources */,
 				033BA5C02A21E74E00D79D4E /* Categories.swift in Sources */,
 				033BA5B52A21DE8000D79D4E /* HomeViewController.swift in Sources */,

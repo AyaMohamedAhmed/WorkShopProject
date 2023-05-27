@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol RepoProtocol {
 
@@ -13,14 +14,17 @@ protocol RepoProtocol {
     func deleteMealFromDB(meal :Meal)
     func getMealsFromDB() -> [Meal]
     func checkIfDBIsEmpty() -> Bool
+    func getDataFromApi(endPoint : String,completion: @escaping ([Result]?)->())
+    
 }
 
 class Repo : RepoProtocol{
     
     let databaseManager : DataBaseManagerProtocol
-    
-    init(dataBaseManager: DataBaseManagerProtocol) {
+    let networkManger : NetworkServicesProtocol
+    init(dataBaseManager: DataBaseManagerProtocol,networkManger : NetworkServicesProtocol) {
         self.databaseManager = dataBaseManager
+        self.networkManger = networkManger
     }
     
     func saveMealToDB(meal: Meal) {
@@ -42,4 +46,17 @@ class Repo : RepoProtocol{
         var checkIfDBIsEmpty = databaseManager.checkIfDBIsEmpty()
         return checkIfDBIsEmpty
     }
+    
+    func getDataFromApi(endPoint : String,completion: @escaping ([Result]?)->()){
+        var url = Constants.BASE_URL + endPoint
+        networkManger.getDataFromApi(apiUrl: url, headers: HTTPHeaders([Constants.HEADERKEY,Constants.HEADERHOST]), val: RecipeResponce.self) { res in
+//            return res?.results
+//            print("APISuccess")
+            completion(res?.results)
+        }
+    }
+    
+    
+    
+    
 }

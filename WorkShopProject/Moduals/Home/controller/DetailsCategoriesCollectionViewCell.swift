@@ -6,30 +6,26 @@
 //
 
 import UIKit
-
+import Kingfisher
 class DetailsCategoriesCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var imageRecipe: UIImageView!
     @IBOutlet weak var numberOfServing: UILabel!
     @IBOutlet weak var typeOfFood: UILabel!
     @IBOutlet weak var namePersonRecipe: UILabel!
     @IBOutlet weak var reciepeName: UILabel!
-   
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func setUp(categories:Categories){
-//        reciepeName.text = categories.title
-//        numberOfServing.text =
-//        typeOfFood.text =
-//        namePersonRecipe.text =
-        
-        
-//
-//        imageRecipe.kf.setImage(with: URL(string: ?? ""), placeholder: UIImage(named: ""), options: nil, progressBlock: nil, completionHandler: nil)
+    func setUp(recipe:Result){
+        reciepeName.text = recipe.name
+        typeOfFood.text = recipe.brand?.name
+        namePersonRecipe.text = "\(recipe.numServings)"
+        imageRecipe.kf.setImage(with: URL(string:recipe.thumbnailURL ?? ""), placeholder: UIImage(named: ""))
     }
-
+    
 }
