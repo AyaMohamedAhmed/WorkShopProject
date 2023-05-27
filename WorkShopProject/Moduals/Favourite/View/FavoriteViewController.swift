@@ -9,12 +9,42 @@ import UIKit
 
 class FavoriteViewController: UIViewController {
 
+    @IBOutlet weak var favTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       activeView()
     }
     
 
+    func activeView(){
+        favTable.delegate = self
+        favTable.dataSource = self
+        
+        favTable.register(UINib(nibName: "FavoriteCell", bundle: nil), forCellReuseIdentifier: "FavoriteCell")
+    }
 
+}
+
+extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+  
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else {
+            return UITableViewCell()
+        }
+     return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
+    
+    
 }
