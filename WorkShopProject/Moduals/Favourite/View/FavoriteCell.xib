@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2W-ll-Yvv">
                         <rect key="frame" x="10" y="10" width="322" height="137"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recipe placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="sFo-jT-As1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RecipePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="sFo-jT-As1">
                                 <rect key="frame" x="0.0" y="0.0" width="322" height="137"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -91,7 +91,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Recipe placeholder" width="383" height="174"/>
+        <image name="RecipePlaceholder" width="383" height="174"/>
         <image name="fillHeart" width="41" height="41"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
