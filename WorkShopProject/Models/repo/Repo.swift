@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 protocol RepoProtocol {
-
     func saveMealToDB (meal : Meal)
     func deleteMealFromDB(meal :Meal)
     func getMealsFromDB() -> [Meal]
@@ -37,26 +36,19 @@ class Repo : RepoProtocol{
     
     func getMealsFromDB() -> [Meal] {
         
-        var localMeals = databaseManager.getMealsFromDB()
+        let localMeals = databaseManager.getMealsFromDB()
         return localMeals
     }
     
     func checkIfDBIsEmpty() -> Bool {
-         
-        var checkIfDBIsEmpty = databaseManager.checkIfDBIsEmpty()
+        let checkIfDBIsEmpty = databaseManager.checkIfDBIsEmpty()
         return checkIfDBIsEmpty
     }
     
     func getDataFromApi(endPoint : String,completion: @escaping ([Result]?)->()){
         var url = Constants.BASE_URL + endPoint
         networkManger.getDataFromApi(apiUrl: url, headers: HTTPHeaders([Constants.HEADERKEY,Constants.HEADERHOST]), val: RecipeResponce.self) { res in
-//            return res?.results
-//            print("APISuccess")
             completion(res?.results)
         }
     }
-    
-    
-    
-    
 }

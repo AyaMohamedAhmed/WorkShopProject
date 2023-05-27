@@ -54,6 +54,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="checkEmptyLabel" destination="hR4-zY-bAQ" id="res-oM-oJl"/>
                         <outlet property="favTable" destination="F90-CD-R4l" id="fg6-kb-ug8"/>
                     </connections>
                 </viewController>

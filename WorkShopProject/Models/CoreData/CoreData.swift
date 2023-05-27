@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 protocol DataBaseManagerProtocol{
     func saveMealToDB(meal : Meal)
@@ -16,12 +17,12 @@ protocol DataBaseManagerProtocol{
 }
 
 class DataBaseManager : DataBaseManagerProtocol {
-    let dataBase = DataBaseManager()
-    var context:NSManagedObjectContext!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var mealsObjects:[NSManagedObject]!
-  
+    
     func saveMealToDB( meal : Meal){
         
+        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "RecipeDB", in: context)!
         let mealObj = NSManagedObject(entity: entity, insertInto: context)
         
@@ -34,6 +35,7 @@ class DataBaseManager : DataBaseManagerProtocol {
         do{
             try context.save()
             print("Successful insert")
+            print(meal.mealName)
 
         } catch let error as NSError{
             print(error.localizedDescription)
@@ -41,7 +43,7 @@ class DataBaseManager : DataBaseManagerProtocol {
     }
     
     func getMealsFromDB() ->[Meal]{
-        
+        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         var meals = [Meal]()
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "RecipeDB")
         do{
@@ -63,11 +65,12 @@ class DataBaseManager : DataBaseManagerProtocol {
     }
     
     func checkIfDBIsEmpty()-> Bool{
+        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         var isEmpty = true
-        let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "FavDB")
+        let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "RecipeDB")
         do{
             mealsObjects = try context.fetch(fetchReq)
-            
+            print("counttt \(mealsObjects.count)")
             if(mealsObjects.count > 0){
                 isEmpty = false
             }
@@ -78,9 +81,9 @@ class DataBaseManager : DataBaseManagerProtocol {
     }
     
     func deleteMealFromDB(meal : Meal){
+        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "RecipeDB")
-        
-        let predicate = NSPredicate(format: "mealName == %@", meal.mealName)
+        let predicate = NSPredicate(format: "mealName == %@", meal.mealName ?? "")
         fetchReq.predicate = predicate
         
         do{
