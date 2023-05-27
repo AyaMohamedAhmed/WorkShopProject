@@ -8,6 +8,7 @@
 import Foundation
 class HomeViewModel{
 let repo:RepoProtocol
+    var recipeResponse:[Result]=[]
     init(repo:RepoProtocol) {
         self.repo = repo
     }
@@ -18,13 +19,14 @@ let repo:RepoProtocol
 //              bindResultToViewController()
 //           }
 //       }
-       func getMeals(endPoint : String,completion: @escaping ([Result]?)->()){
+       func getMeals(endPoint : String, completion: @escaping ()->()){
            
             repo.getDataFromApi(endPoint:endPoint){res in
-                
-               completion(res)
-           }
-//           }  else {
+                print(res?.count)
+                self.recipeResponse.append(contentsOf: res ?? [])
+                completion()
+            }
+//           }  else {?
 //               completion(nil)
 //               return
 //               }

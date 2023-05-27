@@ -20,7 +20,6 @@
 		03C8EA102A1F587C009F9E17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8EA0F2A1F587C009F9E17 /* ViewController.swift */; };
 		03C8EA132A1F587C009F9E17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C8EA112A1F587C009F9E17 /* Main.storyboard */; };
 		03C8EA162A1F587C009F9E17 /* WorkShopProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03C8EA142A1F587C009F9E17 /* WorkShopProject.xcdatamodeld */; };
-		03C8EA182A1F587E009F9E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C8EA172A1F587E009F9E17 /* Assets.xcassets */; };
 		03C8EA1B2A1F587E009F9E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C8EA192A1F587E009F9E17 /* LaunchScreen.storyboard */; };
 		03C8EA262A1F587E009F9E17 /* WorkShopProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8EA252A1F587E009F9E17 /* WorkShopProjectTests.swift */; };
 		03C8EA302A1F587E009F9E17 /* WorkShopProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8EA2F2A1F587E009F9E17 /* WorkShopProjectUITests.swift */; };
@@ -38,6 +37,7 @@
 		9C2C4A6A2A22180100621F53 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C4A692A22180100621F53 /* HomeViewModel.swift */; };
 		9C3A15602A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */; };
 		9C3A15612A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A155F2A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib */; };
+		9C77A7EE2A225A910007E3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C77A7ED2A225A910007E3CF /* Assets.xcassets */; };
 		9C9FD41B2A20ED7A00A460F2 /* RecipeResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FD41A2A20ED7A00A460F2 /* RecipeResponce.swift */; };
 		9CF48D942A209A1A005AE293 /* FavouriteSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF48D932A209A1A005AE293 /* FavouriteSB.storyboard */; };
 		9CF48D962A209A34005AE293 /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF48D952A209A34005AE293 /* HomeSB.storyboard */; };
@@ -80,7 +80,6 @@
 		03C8EA0F2A1F587C009F9E17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03C8EA122A1F587C009F9E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03C8EA152A1F587C009F9E17 /* WorkShopProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WorkShopProject.xcdatamodel; sourceTree = "<group>"; };
-		03C8EA172A1F587E009F9E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03C8EA1A2A1F587E009F9E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03C8EA1C2A1F587E009F9E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C8EA212A1F587E009F9E17 /* WorkShopProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkShopProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +105,7 @@
 		9C2C4A692A22180100621F53 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = "WorkShopProject/Moduals/Details /View/HomeViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionDetailsCell.swift; sourceTree = "<group>"; };
 		9C3A155F2A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSectionDetailsCell.xib; sourceTree = "<group>"; };
+		9C77A7ED2A225A910007E3CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Moduals/Assets.xcassets; sourceTree = "<group>"; };
 		9C9FD41A2A20ED7A00A460F2 /* RecipeResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponce.swift; sourceTree = "<group>"; };
 		9CF48D932A209A1A005AE293 /* FavouriteSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteSB.storyboard; sourceTree = "<group>"; };
 		9CF48D952A209A34005AE293 /* HomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
@@ -198,9 +198,9 @@
 				03C8EA0D2A1F587C009F9E17 /* SceneDelegate.swift */,
 				03C8EA0F2A1F587C009F9E17 /* ViewController.swift */,
 				03C8EA112A1F587C009F9E17 /* Main.storyboard */,
-				03C8EA172A1F587E009F9E17 /* Assets.xcassets */,
-				03C8EA192A1F587E009F9E17 /* LaunchScreen.storyboard */,
 				03C8EA1C2A1F587E009F9E17 /* Info.plist */,
+				9C77A7ED2A225A910007E3CF /* Assets.xcassets */,
+				03C8EA192A1F587E009F9E17 /* LaunchScreen.storyboard */,
 				03C8EA142A1F587C009F9E17 /* WorkShopProject.xcdatamodeld */,
 			);
 			path = WorkShopProject;
@@ -521,8 +521,8 @@
 				03C8EA1B2A1F587E009F9E17 /* LaunchScreen.storyboard in Resources */,
 				9C3A15612A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib in Resources */,
 				033BA5BE2A21E65A00D79D4E /* FoodCategoriesCollectionViewCell.xib in Resources */,
+				9C77A7EE2A225A910007E3CF /* Assets.xcassets in Resources */,
 				033BA5C42A21FFF100D79D4E /* DetailsCategoriesCollectionViewCell.xib in Resources */,
-				03C8EA182A1F587E009F9E17 /* Assets.xcassets in Resources */,
 				03C8EA132A1F587C009F9E17 /* Main.storyboard in Resources */,
 				9CF48D942A209A1A005AE293 /* FavouriteSB.storyboard in Resources */,
 				9CF48D962A209A34005AE293 /* HomeSB.storyboard in Resources */,

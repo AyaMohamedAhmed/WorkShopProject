@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var cardCollectionView: UICollectionView!
-    var recipeResponse:[Result]=[]
+  //  var recipeResponse:[Result]=[]
     var remote : NetworkingService!
     var local : DataBaseManager!
     var repo : Repo!
@@ -24,11 +24,11 @@ class HomeViewController: UIViewController {
         repo = Repo(dataBaseManager: local, networkManger: remote)
         homeVM = HomeViewModel(repo: repo)
         homeVM.getMeals(endPoint: Constants.BREAKFAST){
-            res in
-            print(res)
-            self.cardCollectionView.reloadData()
+            DispatchQueue.main.async{
+                self.cardCollectionView.reloadData()
+            }
         }
-       
+       // homeVM.recipeResponse
         
         let categoriesFlowLayout = UICollectionViewFlowLayout()
         categoriesFlowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
@@ -55,7 +55,8 @@ class HomeViewController: UIViewController {
             case categoriesCollectionView:
                 return categories.count
             case cardCollectionView:
-                return recipeResponse.count
+                print(homeVM.recipeResponse.count)
+                return homeVM.recipeResponse.count
             default:
                 return 1
             }
@@ -72,7 +73,7 @@ class HomeViewController: UIViewController {
                 let cardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailsCategoriesCollectionViewCell", for: indexPath) as? DetailsCategoriesCollectionViewCell
                 cardCell?.layer.borderWidth = 1
                 cardCell?.layer.cornerRadius=25
-                cardCell?.setUp(recipe: recipeResponse[indexPath.row])
+                cardCell?.setUp(recipe: homeVM.recipeResponse[indexPath.row])
                 return cardCell ?? DetailsCategoriesCollectionViewCell()
                 
             default:
@@ -81,8 +82,15 @@ class HomeViewController: UIViewController {
             }
         }
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width:80, height: 100)
-            
+            switch collectionView{
+            case categoriesCollectionView:
+                return CGSize(width:100, height: 100)
+            case cardCollectionView:
+                return CGSize(width:(cardCollectionView.frame
+                    .width-25), height: 150)
+            default:
+                return CGSize(width: 0, height: 0)
+            }
         }
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
