@@ -23,6 +23,7 @@
 		2102CEE12A20D3970032EA57 /* RecipesDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2102CEDF2A20D3970032EA57 /* RecipesDB.xcdatamodeld */; };
 		2102CEE32A20D7F50032EA57 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2102CEE22A20D7F50032EA57 /* Meal.swift */; };
 		21A067C72A21E0D800E0B12F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A067C62A21E0D800E0B12F /* Repo.swift */; };
+		21A067C92A21EA5700E0B12F /* FavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A067C82A21EA5700E0B12F /* FavViewModel.swift */; };
 		26A92E455320F602014B39BE /* Pods_WorkShopProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */; };
 		4EF64EC0009106D2AF1D537E /* Pods_WorkShopProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C63314537B406AAE7A452AA /* Pods_WorkShopProjectTests.framework */; };
 		9C3A15602A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */; };
@@ -77,6 +78,7 @@
 		2102CEE02A20D3970032EA57 /* RecipesCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipesCD.xcdatamodel; sourceTree = "<group>"; };
 		2102CEE22A20D7F50032EA57 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		21A067C62A21E0D800E0B12F /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		21A067C82A21EA5700E0B12F /* FavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavViewModel.swift; path = WorkShopProject/Models/repo/FavViewModel.swift; sourceTree = SOURCE_ROOT; };
 		3612A9359F50AD55D402F514 /* Pods-WorkShopProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-WorkShopProjectTests/Pods-WorkShopProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4BC7CB0EE9770739AC670A68 /* Pods_WorkShopProject_WorkShopProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkShopProject_WorkShopProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkShopProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +265,7 @@
 		9CF48D882A2096D3005AE293 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				21A067C82A21EA5700E0B12F /* FavViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 			files = (
 				2102CEE32A20D7F50032EA57 /* Meal.swift in Sources */,
 				9C3A15602A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift in Sources */,
+				21A067C92A21EA5700E0B12F /* FavViewModel.swift in Sources */,
 				9CF48D9A2A209A75005AE293 /* NetworkService.swift in Sources */,
 				2102CEE12A20D3970032EA57 /* RecipesDB.xcdatamodeld in Sources */,
 				03C8EA162A1F587C009F9E17 /* WorkShopProject.xcdatamodeld in Sources */,
