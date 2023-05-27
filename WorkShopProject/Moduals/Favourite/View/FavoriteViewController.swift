@@ -10,39 +10,34 @@ import UIKit
 class FavoriteViewController: UIViewController {
 
     @IBOutlet weak var favTable: UITableView!
-    
     @IBOutlet weak var checkEmptyLabel: UILabel!
     var meals : [Meal]?
     var isDataReturned  = false
     var isDBEmpty = true
-    var favViewModel : FavViewModel?
+    var favViewModel : FavViewModel = FavViewModel(repo: Repo(dataBaseManager: DataBaseManager()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       activeView()
-        favViewModel = FavViewModel(repo: Repo(dataBaseManager: DataBaseManager()))
+        activeView()
         
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
-
-        isDBEmpty = ((favViewModel?.checkIfDBIsEmpty()) != nil)
+        isDBEmpty = favViewModel.checkIfDBIsEmpty()
+                        
         if(isDBEmpty){
             DispatchQueue.main.async {
-               // self.favTable.isHidden = true
-               // self.emptyFavImage()
+                self.favTable.isHidden = true
+                self.emptyFavImage()
             }
         }else{
-            let mealsFromDB = favViewModel?.getMealsFromDB()
+            let mealsFromDB = favViewModel.getMealsFromDB()
             meals = mealsFromDB
             isDataReturned = true
             DispatchQueue.main.async {
                 self.favTable.isHidden = false
                 self.favTable.reloadData()
             }
-
         }
     }
 
@@ -51,7 +46,6 @@ class FavoriteViewController: UIViewController {
         favTable.dataSource = self
         favTable.register(UINib(nibName: "FavoriteCell", bundle: nil), forCellReuseIdentifier: "FavoriteCell")
     }
-
 }
 
 extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource{
@@ -65,7 +59,7 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else {
             return UITableViewCell()
         }
-        cell.configureCell(localMeals: meals, indexPath: indexPath)
+        cell.configureCell(meal :meals?[indexPath.row] ?? Meal())
      return cell
     }
     
@@ -74,17 +68,18 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        var meal = meals?[indexPath.row] ?? Meal()
+        let meal = meals?[indexPath.row] ?? Meal()
         if editingStyle == .delete {
             let alert = UIAlertController(title: "Delete", message: "Are you sure you want to delete this item?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
            
-                self.favViewModel?.deleteMealFromDB(meal: meal)
+                self.favViewModel.deleteMealFromDB(meal: meal)
                 self.meals?.remove(at: indexPath.row)
                 if(self.meals?.count == 0){
                     self.favTable.isHidden = true
+                    self.emptyFavImage()
                     
                 }else{
                     self.favTable.reloadData()
@@ -93,7 +88,6 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource{
         ))
             self.present(alert, animated: true)
                 self.favTable.reloadData()
-            
         }
        }
     func emptyFavImage(){

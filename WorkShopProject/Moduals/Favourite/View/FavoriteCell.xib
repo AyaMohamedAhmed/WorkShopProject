@@ -28,6 +28,9 @@
                                 <rect key="frame" x="10" y="15" width="65" height="55"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="fillHeart"/>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FLN-6J-K5y"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRU-5N-b2y">
                                 <rect key="frame" x="210" y="45.333333333333336" width="100" height="21.000000000000007"/>

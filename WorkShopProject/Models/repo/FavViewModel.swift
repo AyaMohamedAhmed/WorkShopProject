@@ -27,6 +27,7 @@ class FavViewModel {
     }
     func checkIfDBIsEmpty () -> Bool {
         let checkIfDBIsEmpty = repo.checkIfDBIsEmpty()
+        print(checkIfDBIsEmpty)
         return checkIfDBIsEmpty
     }
 }
