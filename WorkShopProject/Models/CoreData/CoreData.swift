@@ -8,20 +8,19 @@
 import Foundation
 import CoreData
 
-
-protocol CoreDataManagerProtocol{
-    func SaveTeamToDB(context : NSManagedObjectContext , meal : Meal)
-    func getTeamsFromDB(context:NSManagedObjectContext) ->[Meal]
-    func checkIfDBIsEmpty(context : NSManagedObjectContext)-> Bool
-    func deleteTeamFromDB(context:NSManagedObjectContext , meal : Meal)
+protocol DataBaseManagerProtocol{
+    func saveMealToDB(meal : Meal)
+    func getMealsFromDB() ->[Meal]
+    func checkIfDBIsEmpty()-> Bool
+    func deleteMealFromDB(meal : Meal)
 }
 
-class CoreDataManager : CoreDataManagerProtocol {
-    let dataBase = CoreDataManager()
+class DataBaseManager : DataBaseManagerProtocol {
+    let dataBase = DataBaseManager()
     var context:NSManagedObjectContext!
     var mealsObjects:[NSManagedObject]!
-    
-    func SaveTeamToDB(context : NSManagedObjectContext , meal : Meal){
+  
+    func saveMealToDB( meal : Meal){
         
         let entity = NSEntityDescription.entity(forEntityName: "RecipeDB", in: context)!
         let mealObj = NSManagedObject(entity: entity, insertInto: context)
@@ -41,7 +40,7 @@ class CoreDataManager : CoreDataManagerProtocol {
         }
     }
     
-    func getTeamsFromDB(context:NSManagedObjectContext) ->[Meal]{
+    func getMealsFromDB() ->[Meal]{
         
         var meals = [Meal]()
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "RecipeDB")
@@ -49,13 +48,13 @@ class CoreDataManager : CoreDataManagerProtocol {
             mealsObjects = try context.fetch(fetchReq)
             for meal in mealsObjects{
           
-                let mealName = meal.value(forKey: "mealName") as! String
-                let mealCountry = meal.value(forKey: "mealCountry") as! String
-                let numOfServing = meal.value(forKey: "leagueI") as! Int
-                let mealId   = meal.value(forKey: "mealID")  as! Int
-                let mealMaker = meal.value(forKey: "mealMaker") as! String
-                let mealImage = meal.value(forKey: "mealImage") as! String
-                meals.append(Meal(mealID: mealId, mealName: mealName, mealMaker: mealMaker, mealCountry: mealCountry, numOfSurving: numOfServing , mealImage: mealImage))
+                let mealName = meal.value(forKey: "mealName") as? String
+                let mealCountry = meal.value(forKey: "mealCountry") as? String
+                let mealId   = meal.value(forKey: "mealID")  as? Int
+                let mealMaker = meal.value(forKey: "mealMaker") as? String
+                let mealImage = meal.value(forKey: "mealImage") as? String
+                let numOfServing = meal.value(forKey: "numOfServing") as? Int
+                meals.append(Meal(mealID: mealId ?? 0 , mealName: mealName ?? "", mealMaker: mealMaker ?? "" , mealCountry: mealCountry ?? "" , numOfSurving: numOfServing  ?? 0 , mealImage: mealImage ?? ""))
             }
         }catch let error as NSError{
             print(error.localizedDescription)
@@ -63,7 +62,7 @@ class CoreDataManager : CoreDataManagerProtocol {
         return meals
     }
     
-    func checkIfDBIsEmpty(context : NSManagedObjectContext)-> Bool{
+    func checkIfDBIsEmpty()-> Bool{
         var isEmpty = true
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "FavDB")
         do{
@@ -78,7 +77,7 @@ class CoreDataManager : CoreDataManagerProtocol {
         return isEmpty
     }
     
-    func deleteTeamFromDB(context:NSManagedObjectContext , meal : Meal){
+    func deleteMealFromDB(meal : Meal){
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "RecipeDB")
         
         let predicate = NSPredicate(format: "mealName == %@", meal.mealName)
