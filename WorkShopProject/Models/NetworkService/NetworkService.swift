@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+
 protocol NetworkServicesProtocol {
      func getDataFromApi<T: Decodable>(apiUrl: String,headers: HTTPHeaders?, val: T.Type,completion: @escaping (T?)->())
 }

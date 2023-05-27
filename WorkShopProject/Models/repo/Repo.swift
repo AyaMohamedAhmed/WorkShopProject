@@ -18,7 +18,6 @@ protocol RepoProtocol {
 class Repo : RepoProtocol{
     
     let databaseManager : DataBaseManagerProtocol
-    
     init(dataBaseManager: DataBaseManagerProtocol) {
         self.databaseManager = dataBaseManager
     }
@@ -33,13 +32,12 @@ class Repo : RepoProtocol{
     
     func getMealsFromDB() -> [Meal] {
         
-        var localMeals = databaseManager.getMealsFromDB()
+        let localMeals = databaseManager.getMealsFromDB()
         return localMeals
     }
     
     func checkIfDBIsEmpty() -> Bool {
-         
-        var checkIfDBIsEmpty = databaseManager.checkIfDBIsEmpty()
+        let checkIfDBIsEmpty = databaseManager.checkIfDBIsEmpty()
         return checkIfDBIsEmpty
     }
 }

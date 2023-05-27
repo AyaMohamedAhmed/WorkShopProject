@@ -20,9 +20,11 @@
 		2102CED82A20A64C0032EA57 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2102CED62A20A64C0032EA57 /* FavoriteCell.swift */; };
 		2102CED92A20A64C0032EA57 /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2102CED72A20A64C0032EA57 /* FavoriteCell.xib */; };
 		2102CEDB2A20B4480032EA57 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2102CEDA2A20B4480032EA57 /* FavoriteViewController.swift */; };
-		2102CEE12A20D3970032EA57 /* RecipesDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2102CEDF2A20D3970032EA57 /* RecipesDB.xcdatamodeld */; };
+		2102CEE12A20D3970032EA57 /* RecipeDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2102CEDF2A20D3970032EA57 /* RecipeDB.xcdatamodeld */; };
 		2102CEE32A20D7F50032EA57 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2102CEE22A20D7F50032EA57 /* Meal.swift */; };
 		21A067C72A21E0D800E0B12F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A067C62A21E0D800E0B12F /* Repo.swift */; };
+		21A067C92A21EA5700E0B12F /* FavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A067C82A21EA5700E0B12F /* FavViewModel.swift */; };
+		21A067CB2A2216D100E0B12F /* FavCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A067CA2A2216D100E0B12F /* FavCellViewModel.swift */; };
 		26A92E455320F602014B39BE /* Pods_WorkShopProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */; };
 		4EF64EC0009106D2AF1D537E /* Pods_WorkShopProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C63314537B406AAE7A452AA /* Pods_WorkShopProjectTests.framework */; };
 		9C3A15602A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */; };
@@ -77,6 +79,8 @@
 		2102CEE02A20D3970032EA57 /* RecipesCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipesCD.xcdatamodel; sourceTree = "<group>"; };
 		2102CEE22A20D7F50032EA57 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		21A067C62A21E0D800E0B12F /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		21A067C82A21EA5700E0B12F /* FavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavViewModel.swift; path = WorkShopProject/Models/repo/FavViewModel.swift; sourceTree = SOURCE_ROOT; };
+		21A067CA2A2216D100E0B12F /* FavCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavCellViewModel.swift; path = WorkShopProject/Models/repo/FavCellViewModel.swift; sourceTree = SOURCE_ROOT; };
 		3612A9359F50AD55D402F514 /* Pods-WorkShopProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-WorkShopProjectTests/Pods-WorkShopProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4BC7CB0EE9770739AC670A68 /* Pods_WorkShopProject_WorkShopProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkShopProject_WorkShopProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		503B5616C7770E6772EC273D /* Pods_WorkShopProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkShopProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +267,8 @@
 		9CF48D882A2096D3005AE293 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				21A067C82A21EA5700E0B12F /* FavViewModel.swift */,
+				21A067CA2A2216D100E0B12F /* FavCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -322,7 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF48D9B2A209A98005AE293 /* CoreData.swift */,
-				2102CEDF2A20D3970032EA57 /* RecipesDB.xcdatamodeld */,
+				2102CEDF2A20D3970032EA57 /* RecipeDB.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -605,13 +611,15 @@
 			files = (
 				2102CEE32A20D7F50032EA57 /* Meal.swift in Sources */,
 				9C3A15602A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift in Sources */,
+				21A067C92A21EA5700E0B12F /* FavViewModel.swift in Sources */,
 				9CF48D9A2A209A75005AE293 /* NetworkService.swift in Sources */,
-				2102CEE12A20D3970032EA57 /* RecipesDB.xcdatamodeld in Sources */,
+				2102CEE12A20D3970032EA57 /* RecipeDB.xcdatamodeld in Sources */,
 				03C8EA162A1F587C009F9E17 /* WorkShopProject.xcdatamodeld in Sources */,
 				9C9FD41B2A20ED7A00A460F2 /* RecipeResponce.swift in Sources */,
 				2102CED82A20A64C0032EA57 /* FavoriteCell.swift in Sources */,
 				03C8EA102A1F587C009F9E17 /* ViewController.swift in Sources */,
 				03C8EA0C2A1F587C009F9E17 /* AppDelegate.swift in Sources */,
+				21A067CB2A2216D100E0B12F /* FavCellViewModel.swift in Sources */,
 				9CF48D9C2A209A98005AE293 /* CoreData.swift in Sources */,
 				2102CEDB2A20B4480032EA57 /* FavoriteViewController.swift in Sources */,
 				21A067C72A21E0D800E0B12F /* Repo.swift in Sources */,
@@ -970,13 +978,13 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		2102CEDF2A20D3970032EA57 /* RecipesDB.xcdatamodeld */ = {
+		2102CEDF2A20D3970032EA57 /* RecipeDB.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				2102CEE02A20D3970032EA57 /* RecipesCD.xcdatamodel */,
 			);
 			currentVersion = 2102CEE02A20D3970032EA57 /* RecipesCD.xcdatamodel */;
-			path = RecipesDB.xcdatamodeld;
+			path = RecipeDB.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
