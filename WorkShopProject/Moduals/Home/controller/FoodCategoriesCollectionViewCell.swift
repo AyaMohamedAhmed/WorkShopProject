@@ -15,10 +15,10 @@ class FoodCategoriesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
      }
     
-    func SetUp(categories:Categories){
+    func setUp(categories:Categories){
         categoriesLbl.text = categories.title
         categoriesImg.image = UIImage(named: categories.img)
-    
+        circleImage(image: categoriesImg)
     }
 
 }

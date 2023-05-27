@@ -10,45 +10,64 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
-   
-
+       @IBOutlet weak var cardCollectionView: UICollectionView!
+    var recipeResponse:[]=[]
     override func viewDidLoad() {
         super.viewDidLoad()
+        let categoriesFlowLayout = UICollectionViewFlowLayout()
+        categoriesFlowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+        categoriesCollectionView.collectionViewLayout=categoriesFlowLayout
         
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
-        categoriesCollectionView.collectionViewLayout=flowLayout
+        let cardflowLayout = UICollectionViewFlowLayout()
+        categoriesFlowLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
+        cardCollectionView.collectionViewLayout=categoriesFlowLayout
         registerCells()
-        
-        
-        
+     
     }
     private func registerCells(){
         categoriesCollectionView.register(UINib(nibName: "FoodCategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FoodCategoriesCollectionViewCell")
+        
+        cardCollectionView.register(UINib(nibName: "DetailsCategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DetailsCategoriesCollectionViewCell")
     
     }
-    
-
-
+  
 }
 
 
 extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
+        switch collectionView{
+            case categoriesCollectionView:
+                 return categories.count
+        case cardCollectionView:
+            return recipeResponse.count
+        default:
+            return 1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodCategoriesCollectionViewCell", for: indexPath) as! FoodCategoriesCollectionViewCell
-        //cell.layer.borderWidth = 1
-        //cell.layer.cornerRadius=25
-        cell.SetUp(categories: categories[indexPath.row])
-        return cell
+        switch collectionView{
+        case categoriesCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodCategoriesCollectionViewCell", for: indexPath) as? FoodCategoriesCollectionViewCell
+            cell?.setUp(categories: categories[indexPath.row])
+            return cell ?? FoodCategoriesCollectionViewCell()
+            
+        case cardCollectionView:
+            let cardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailsCategoriesCollectionViewCell", for: indexPath) as? DetailsCategoriesCollectionViewCell
+            cardCell?.layer.borderWidth = 1
+            cardCell?.layer.cornerRadius=25
+            cardCell?.setUp(categories: categories[indexPath.row])
+            return cardCell ?? DetailsCategoriesCollectionViewCell()
+       
+        default:
+            return UICollectionViewCell()
+
+        }
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width:80, height: 100)
-        
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -56,8 +75,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         //Todo add when press
         
         
-        
-        
+     
     }
     
 }

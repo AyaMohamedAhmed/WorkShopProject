@@ -46,6 +46,22 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="Msf-5i-g0j"/>
                                 </connections>
                             </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gl7-fA-y0L">
+                                <rect key="frame" x="16" y="336" width="361" height="413"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ljU-cB-Lce">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="EH1-eW-LkK"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="ZpX-XC-u38"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,6 +79,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="tI4-qS-tz3"/>
                     <connections>
+                        <outlet property="cardCollectionView" destination="Gl7-fA-y0L" id="l24-io-jvb"/>
                         <outlet property="categoriesCollectionView" destination="vN2-AI-aE5" id="kxN-B0-jUm"/>
                     </connections>
                 </viewController>
