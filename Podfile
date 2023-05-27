@@ -10,6 +10,7 @@ pod 'RxSwift', '6.5.0'
 pod 'lottie-ios'
 pod 'Kingfisher'
 pod 'ReachabilitySwift'
+pod 'Alamofire'
 
   # Pods for WorkShopProject
 
