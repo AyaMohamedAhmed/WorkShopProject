@@ -8,9 +8,7 @@
 import Foundation
 import UIKit
 
-func circleImage(image : UIImageView){
-        
+func circleImage(image : UIView){
         image.layer.cornerRadius = image.frame.height / 2
-        
         image.clipsToBounds = true
     }

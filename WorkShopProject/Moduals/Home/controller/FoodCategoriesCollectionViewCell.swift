@@ -9,8 +9,10 @@ import UIKit
 
 class FoodCategoriesCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var viewThatContainImage: UIView!
     @IBOutlet weak var categoriesImg: UIImageView!
     @IBOutlet weak var categoriesLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
      }
@@ -18,7 +20,7 @@ class FoodCategoriesCollectionViewCell: UICollectionViewCell {
     func setUp(categories:Categories){
         categoriesLbl.text = categories.title
         categoriesImg.image = UIImage(named: categories.img)
-        circleImage(image: categoriesImg)
+        circleImage(image: viewThatContainImage)
     }
 
 }

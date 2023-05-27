@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
         homeVM = HomeViewModel(repo: repo)
         homeVM.getMeals(endPoint: Constants.BREAKFAST){
             res in
+            print(res)
             self.cardCollectionView.reloadData()
         }
        
