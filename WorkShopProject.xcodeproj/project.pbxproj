@@ -36,7 +36,6 @@
 		4EF64EC0009106D2AF1D537E /* Pods_WorkShopProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C63314537B406AAE7A452AA /* Pods_WorkShopProjectTests.framework */; };
 		9C3A15602A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */; };
 		9C3A15612A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A155F2A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib */; };
-		9C77A7EE2A225A910007E3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C77A7ED2A225A910007E3CF /* Assets.xcassets */; };
 		9C9FD41B2A20ED7A00A460F2 /* RecipeResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FD41A2A20ED7A00A460F2 /* RecipeResponce.swift */; };
 		9CD48EAF2A225F97002BC388 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD48EAE2A225F97002BC388 /* HomeViewModel.swift */; };
 		9CF48D942A209A1A005AE293 /* FavouriteSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF48D932A209A1A005AE293 /* FavouriteSB.storyboard */; };
@@ -44,6 +43,7 @@
 		9CF48D982A209A50005AE293 /* DetailsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF48D972A209A50005AE293 /* DetailsSB.storyboard */; };
 		9CF48D9A2A209A75005AE293 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF48D992A209A75005AE293 /* NetworkService.swift */; };
 		9CF48D9C2A209A98005AE293 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF48D9B2A209A98005AE293 /* CoreData.swift */; };
+		A805B2692A23573A00608FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A805B2682A23573A00608FDD /* Assets.xcassets */; };
 		A8DE8C702A2212F0009C283F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE8C6F2A2212F0009C283F /* Constants.swift */; };
 		A8FE31C8B3F21C2808197F0B /* Pods_WorkShopProject_WorkShopProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC7CB0EE9770739AC670A68 /* Pods_WorkShopProject_WorkShopProjectUITests.framework */; };
 /* End PBXBuildFile section */
@@ -104,7 +104,6 @@
 		880500EBA6A4C8885D4ED04C /* Pods-WorkShopProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProjectTests.release.xcconfig"; path = "Target Support Files/Pods-WorkShopProjectTests/Pods-WorkShopProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C3A155E2A20CBC700FBAA4F /* HeaderSectionDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionDetailsCell.swift; sourceTree = "<group>"; };
 		9C3A155F2A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderSectionDetailsCell.xib; sourceTree = "<group>"; };
-		9C77A7ED2A225A910007E3CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Moduals/Assets.xcassets; sourceTree = "<group>"; };
 		9C9FD41A2A20ED7A00A460F2 /* RecipeResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponce.swift; sourceTree = "<group>"; };
 		9CD48EAE2A225F97002BC388 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9CF48D932A209A1A005AE293 /* FavouriteSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteSB.storyboard; sourceTree = "<group>"; };
@@ -112,6 +111,7 @@
 		9CF48D972A209A50005AE293 /* DetailsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsSB.storyboard; sourceTree = "<group>"; };
 		9CF48D992A209A75005AE293 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9CF48D9B2A209A98005AE293 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		A805B2682A23573A00608FDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		A8DE8C6F2A2212F0009C283F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC069F3DBB8DACFD90D7E11F /* Pods-WorkShopProject-WorkShopProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProject-WorkShopProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-WorkShopProject-WorkShopProjectUITests/Pods-WorkShopProject-WorkShopProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F0D6D3FCF32E5502FE4986BC /* Pods-WorkShopProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkShopProject.debug.xcconfig"; path = "Target Support Files/Pods-WorkShopProject/Pods-WorkShopProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				03C8EA0F2A1F587C009F9E17 /* ViewController.swift */,
 				03C8EA112A1F587C009F9E17 /* Main.storyboard */,
 				03C8EA1C2A1F587E009F9E17 /* Info.plist */,
-				9C77A7ED2A225A910007E3CF /* Assets.xcassets */,
+				A805B2682A23573A00608FDD /* Assets.xcassets */,
 				03C8EA192A1F587E009F9E17 /* LaunchScreen.storyboard */,
 				03C8EA142A1F587C009F9E17 /* WorkShopProject.xcdatamodeld */,
 			);
@@ -521,7 +521,7 @@
 				03C8EA1B2A1F587E009F9E17 /* LaunchScreen.storyboard in Resources */,
 				9C3A15612A20CBC700FBAA4F /* HeaderSectionDetailsCell.xib in Resources */,
 				033BA5BE2A21E65A00D79D4E /* FoodCategoriesCollectionViewCell.xib in Resources */,
-				9C77A7EE2A225A910007E3CF /* Assets.xcassets in Resources */,
+				A805B2692A23573A00608FDD /* Assets.xcassets in Resources */,
 				033BA5C42A21FFF100D79D4E /* DetailsCategoriesCollectionViewCell.xib in Resources */,
 				03C8EA132A1F587C009F9E17 /* Main.storyboard in Resources */,
 				9CF48D942A209A1A005AE293 /* FavouriteSB.storyboard in Resources */,

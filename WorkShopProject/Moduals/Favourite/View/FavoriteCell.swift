@@ -36,7 +36,7 @@ class FavoriteCell: UITableViewCell {
         mealName.text = meal.mealName ?? "MealName"
         mealMaker.text = meal.mealMaker ?? "MealMaker"
         mealCountry.text = meal.mealCountry ?? "MealCountry"
-        mealImage.kf.setImage(with: URL(string: meal.mealImage ?? "") ,placeholder: UIImage(named: "RecipePlaceholder" ))
+        mealImage.kf.setImage(with: URL(string: meal.mealImage ?? "") ,placeholder: UIImage(named: "RecipePlaceholder"))
         numOfServices.text = "Sevings : \(String(describing: meal.numOfSurving))"
     }
     @IBAction func deleteBtn(_ sender: Any) {
