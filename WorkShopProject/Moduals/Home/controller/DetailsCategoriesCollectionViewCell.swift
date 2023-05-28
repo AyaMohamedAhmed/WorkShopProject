@@ -22,14 +22,14 @@ class DetailsCategoriesCollectionViewCell: UICollectionViewCell {
     }
     
     func setUp(categories:Categories){
-        reciepeName.text = categories.title
-        numberOfServing.text =
-        typeOfFood.text =
-        namePersonRecipe.text =
+//        reciepeName.text = categories.title
+//        numberOfServing.text =
+//        typeOfFood.text =
+//        namePersonRecipe.text =
         
         
-        
-        imageRecipe.kf.setImage(with: URL(string: ?? ""), placeholder: UIImage(named: ""), options: nil, progressBlock: nil, completionHandler: nil)
+//
+//        imageRecipe.kf.setImage(with: URL(string: ?? ""), placeholder: UIImage(named: ""), options: nil, progressBlock: nil, completionHandler: nil)
     }
 
 }

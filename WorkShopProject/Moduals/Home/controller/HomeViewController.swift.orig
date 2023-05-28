@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
        @IBOutlet weak var cardCollectionView: UICollectionView!
-  //  var recipeResponse:[]=[]
+    var recipeResponse:[]=[]
     override func viewDidLoad() {
         super.viewDidLoad()
         let categoriesFlowLayout = UICollectionViewFlowLayout()
@@ -40,7 +40,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             case categoriesCollectionView:
                  return categories.count
         case cardCollectionView:
-            return 0 //recipeResponse.count
+            return recipeResponse.count
         default:
             return 1
         }
