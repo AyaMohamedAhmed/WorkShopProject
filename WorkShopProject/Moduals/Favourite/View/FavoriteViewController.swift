@@ -14,7 +14,7 @@ class FavoriteViewController: UIViewController {
     var meals : [Meal]?
     var isDataReturned  = false
     var isDBEmpty = true
-    var favViewModel : FavViewModel = FavViewModel(repo: Repo(dataBaseManager: DataBaseManager()))
+    var favViewModel : FavViewModel = FavViewModel(repo: Repo(dataBaseManager: DataBaseManager(), networkManger: NetworkingService()))
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,7 +18,7 @@ class FavoriteCell: UITableViewCell {
     @IBOutlet weak var mealCountry: UILabel!
     @IBOutlet weak var mealImage: UIImageView!
     var meal: Meal?
-    let cellViewModel = FavCellViewModel(repo: Repo(dataBaseManager: DataBaseManager()))
+    let cellViewModel = FavCellViewModel(repo: Repo(dataBaseManager: DataBaseManager(), networkManger: NetworkingService()))
     
     override func awakeFromNib() {
         super.awakeFromNib()

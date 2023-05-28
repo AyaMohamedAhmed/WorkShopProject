@@ -18,7 +18,7 @@ struct Result: Codable {
     var brand: Brand?
     
     var thumbnailURL: String?
-    
+    var id :Int?
     var numServings: Int?
     
     var instructions: [Instruction]?
@@ -33,7 +33,7 @@ struct Result: Codable {
         case sections
         case brand
         case thumbnailURL = "thumbnail_url"
-        
+        case id
         case numServings = "num_servings"
         
         case instructions
